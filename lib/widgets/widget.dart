@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../pages/home_page.dart';
@@ -126,124 +128,150 @@ class _BilelikdeAppState extends State<BilelikdeApp> {
 
 
 Widget get Publikassiya =>
-  Container(
-                      width: 350,
-                      height: 220,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Color.fromRGBO(255, 255, 255, 1),
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
+                     Padding(
+                       padding: const EdgeInsets.only(top: 18.0),
+                       child: Container(
+                        width: 340,
+                        height: 180,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Color.fromARGB(255, 221, 235, 245),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
-                                "5000-7000 ТМТ \в месяц",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 12,
-                                ),
-                              ),
-                              SvgPicture.asset(
-                                "../asset/svg/otmecbez.svg",
-                                height: 15,
-                              ),
-                            ],
-                          ),
-                          Text(
-                            "Нужен frontend-ep \в команду веб...",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 10,
-                            ),
-                          ),
-                          Text(
-                            "Нужен frontend-ep \в команду веб...",
-                            style: TextStyle(
-                              color: Colors.grey.shade500,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 8,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                "../asset/svg/kalendar.svg",
-                                height: 10,
-                              ),
-                              Text(
-                                "Опубликован 19 часов назад",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 6,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                "../asset/svg/eye.svg",
-                                height: 10,
-                              ),
-                              Text(
-                                "Просмотров: 20",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 6,
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  SvgPicture.asset(
-                                    "../asset/svg/comm.svg",
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    "Откликов: 7",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 6,
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "5000-7000 ТМТ \в месяц",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w800,
+                                        fontSize: 16,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                    SvgPicture.asset(
+                                      "../asset/svg/otmecbez.svg",
+                                      height: 15,
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ],
-                          ),
-                          Container(
-                            height: 50,
-                            width: 100,
-                            color: Color.fromRGBO(191, 228, 255, 1),
-                            child: Row(
-                              children: [
-                                Container(
-                                  color: Color.fromRGBO(90, 176, 239, 1),
-                                  child: Center(
-                                    child: Text("Откликнуться",style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 8,),),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: Text(
+                                  "Нужен frontend-ep \в команду веб...",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14,
                                   ),
                                 ),
-                                Container(
-                                  height: 50,
-                            width: 100,
-                                  color: Color.fromRGBO(191, 228, 255, 1),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        color: Color.fromRGBO(255, 255, 255, 1),
-                                        child: Center(
-                                          child: Text("Позвонить",style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 8,),),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10.0),
+                                child: Text(
+                                  "Нужен frontend-ep \в команду веб...",
+                                  style: TextStyle(
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 10,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10.0),
+                                child: Row(
+                                  children: [
+                                    SvgPicture.asset(
+                                      "../asset/svg/kalendar.svg",
+                                      height: 15,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8.0),
+                                      child: Text(
+                                        "Опубликован 19 часов назад",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 8,
                                         ),
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: Row(
+                                  children: [
+                                    SvgPicture.asset(
+                                      "../asset/svg/eye.svg",
+                                      height: 15,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 8.0),
+                                      child: Text(
+                                        "Просмотров: 20",
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 8,
+                                        ),
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        SvgPicture.asset(
+                                          "../asset/svg/comm.svg",
+                                          height: 15,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 8.0),
+                                          child: Text(
+                                            "Откликов: 7",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 8,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                height:34,
+                                width: 340,
+                                color: Color.fromRGBO(191, 228, 255, 1),
+                                child: 
+                                Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Container(width: 120,height: 20,
+                                      color: Color.fromRGBO(90, 176, 239, 1),
+                                      child: Center(
+                                        child: Text("Откликнуться", 
+                                        style: TextStyle(color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 8,),),
+                                      ),
+                                    ),
+                                    Container(width: 120,height:20,
+                                            color: Color.fromRGBO(255, 255, 255, 1),
+                                            child: Center(
+                                              child: Text("Позвонить",style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 8,),),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                          
                           ),
-                        ],
-                      ),
+                     
                     );
